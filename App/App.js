@@ -48,8 +48,7 @@ function reducer(state: ?NavigationState, action: any): NavigationState {
         {key: 'Planet 2', image: 2, name: 'Suty V28'},
         {key: 'Planet 3', image: 3, name: 'Melies M55'},
         {key: 'Planet 4', image: 4, name: 'Atlantis U78'},
-        {key: 'Planet 5', image: 5, name: 'New Earth H21'},
-        {key: 'Planet 6', image: 6, name: 'Dystopia BW5'}
+        {key: 'Planet 5', image: 6, name: 'Dystopia BW5'}
       ]
     };
   }
@@ -223,4 +222,11 @@ class App extends Component {
   }
 }
 
-export default codePush(App)
+export default codePush({
+  installMode: codePush.InstallMode.IMMEDIATE,
+  updateDialog: {
+    title: 'Galactic Update',
+    mandatoryUpdateMessage: 'Forces were at work in our galaxy. Our planets have changed',
+    mandatoryContinueButtonLabel: 'Explore'
+  }
+})(App)
