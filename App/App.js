@@ -9,6 +9,7 @@ import type  {
   NavigationTransitionProps,
 } from 'NavigationTypeDefinition';
 
+import codePush from 'react-native-code-push';
 import DynamicImage from './DynamicImage'
 
 const {
@@ -221,4 +222,4 @@ class App extends Component {
   }
 }
 
-export default App
+export default codePush(App)
