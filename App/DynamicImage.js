@@ -6,6 +6,7 @@ const Image02 = require('./images/02.png')
 const Image03 = require('./images/03.png')
 const Image04 = require('./images/04.png')
 const Image05 = require('./images/05.png')
+const Image06 = require('./images/06.png')
 
 const React = require('react');
 const ReactNative = require('react-native');
@@ -67,6 +68,11 @@ export default function DynamicImage(imageIndex) {
     result = <Image
       source={Image05} />
     break;
+    case 6:
+    result = <Image
+      source={Image06} />
+    break;
+
   }
   return result
 
